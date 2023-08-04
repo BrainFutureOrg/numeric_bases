@@ -3,6 +3,8 @@
 
 int main()
 {
+    //printf("%d\n", -5%-2);
+
     int number, base;
 
     printf("Enter a number in the decimal number system: ");

@@ -13,7 +13,7 @@ typedef struct {
 
 void print_digit_sequence(digit_sequence sequence);
 
-digit_sequence number_to_sequence(int number, uint base);
+digit_sequence number_to_sequence(int number, int base);
 
 void free_digit_sequence(digit_sequence sequence);
 

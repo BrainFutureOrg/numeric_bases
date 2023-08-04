@@ -57,11 +57,16 @@ void print_digit_sequence(digit_sequence sequence){
     printf("\n");
 }
 
-digit_sequence number_to_sequence(int number, uint base){
+unsigned char mod_positive(int number, int base){
+    int mod=number%base;
+    return mod<0?mod-base:mod;
+}
+
+digit_sequence number_to_sequence(int number, int base){
 
     digit_sequence result = create_digit_sequence();
 
-    if(number<0){
+    if(number<0&&base>0){
         result.minus=1;
         number= abs(number);
     }
@@ -70,8 +75,9 @@ digit_sequence number_to_sequence(int number, uint base){
     }
     else {
         while (number){
-            unsigned char remainder = number % base;
+            unsigned char remainder = mod_positive(number, base);//number % base;
             digit_sequence_append(&result,remainder);
+            number-=remainder;
             number/=base;
             //printf("remainder %d, num left %d", remainder, number);
         }
