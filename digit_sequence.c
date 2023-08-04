@@ -1,5 +1,5 @@
 //
-// Created by kosenko on 02.08.23.
+// Created by kosenko & rehesha on 02.08.23.
 //
 
 #include "digit_sequence.h"
