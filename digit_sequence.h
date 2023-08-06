@@ -6,6 +6,7 @@
 #define NUMERIC_BASES__DIGIT_SEQUENCE_H
 #include <stdlib.h>
 typedef struct {
+    int base;
     unsigned char * digits;
     unsigned int allocated_size, size;
     char minus;
